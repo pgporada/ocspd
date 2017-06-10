@@ -36,7 +36,6 @@ import datetime
 import logging
 import os
 import traceback
-import configargparse
 import requests.exceptions
 from ocspd.core.exceptions import OCSPBadResponse
 from ocspd.core.exceptions import RenewalRequirementMissing
@@ -145,7 +144,7 @@ def ocsp_except_handle(ctx=None):
                 requests.ConnectionError,
                 requests.RequestException
             )
-                       ):
+        ):
             LOG.error(
                 "Failed to connect to: %s, for %s",
                 ctx.model.ocsp_urls[ctx.model.url_index],
@@ -166,9 +165,9 @@ def ocsp_except_handle(ctx=None):
         #  - every hour (9x), 3 per url
         #  - twice a day per url
         err_count = ctx.set_last_exception(str(exc))
-        if err_count < (3*len_ocsp_urls)+1:
+        if err_count < (3 * len_ocsp_urls) + 1:
             ctx.reschedule(10)  # every err_count minutes
-        elif err_count < (6*len_ocsp_urls)+1:
+        elif err_count < (6 * len_ocsp_urls) + 1:
             ctx.reschedule(3600)  # every hour
         else:
             ctx.reschedule(43200 // len_ocsp_urls)  # twice a day per url

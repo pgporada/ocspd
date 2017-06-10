@@ -38,6 +38,7 @@ class ScheduledTaskContext(object):
     the appropriate action.
     """
     # pylint: disable=too-few-public-methods
+
     def __init__(self, task_name, subject, sched_time=None, **attributes):
         """
         Initialise a :class:`~ocspd.scheduling.ScheduledTaskContext` with a
@@ -105,6 +106,7 @@ class SchedulerThread(threading.Thread):
     that, you should pass ``sched_time=None`` instead, it will bypass the
     scheduling mechanism and place your task directly into the worker queue.
     """
+
     def __init__(self, *args, **kwargs):
         """
         Initialise the thread's arguments and its parent

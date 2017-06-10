@@ -16,6 +16,7 @@ class OCSPTaskContext(ScheduledTaskContext):
      - Renames :class:`~scheduling.ScheduledTaskContext`'s ``subject`` argument
        to ``model``.
     """
+
     def __init__(self, task_name, model, sched_time=None, **attributes):
         """
         Initialise a OCSPTaskContext with a task name, cert model, and optional

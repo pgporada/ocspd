@@ -27,5 +27,6 @@ def main():
     logger.error("Something might have gone a bit wrong")
     logger.critical("Woah! do something!!")
 
+
 if __name__ == '__main__':
     main()

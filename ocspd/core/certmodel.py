@@ -46,6 +46,7 @@ class CertModel(object):
     Model for certificate files.
     """
     # pylint: disable=too-many-instance-attributes
+
     def __init__(self, filename):
         """
         Initialise the CertModel model object, and read the certificate data
@@ -249,7 +250,7 @@ class CertModel(object):
         if LOG.isEnabledFor(logging.DEBUG):
             LOG.debug(
                 "Response data: \n%s",
-                pretty_base64(ocsp_staple, line_len=75, prefix=" "*36)
+                pretty_base64(ocsp_staple, line_len=75, prefix=" " * 36)
             )
         if ocsp_staple == b'':
             raise OCSPBadResponse(
@@ -402,7 +403,7 @@ class CertModel(object):
         if LOG.isEnabledFor(logging.DEBUG):
             LOG.debug(
                 "Request data: \n%s",
-                pretty_base64(ocsp_request, line_len=75, prefix=" "*36)
+                pretty_base64(ocsp_request, line_len=75, prefix=" " * 36)
             )
         return ocsp_request
 

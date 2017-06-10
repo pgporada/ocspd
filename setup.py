@@ -3,7 +3,6 @@
 Python setuptools script for ``ocspd`` application.
 """
 import os
-import shutil
 from setuptools import setup
 from setuptools import find_packages
 from setuptools.command.install import install
@@ -63,6 +62,7 @@ class CustomInstallCommand(install):
                               "might cause problems.".format(directory))
                     else:
                         raise
+
 
 setup(
     name='ocspd',

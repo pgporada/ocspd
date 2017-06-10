@@ -53,4 +53,4 @@ def split_by_len(string, length):
     :len int length: Max length of the lines.
     :return list: List of substrings of input string
     """
-    return [string[i:i+length] for i in range(0, len(string), length)]
+    return [string[i:i + length] for i in range(0, len(string), length)]

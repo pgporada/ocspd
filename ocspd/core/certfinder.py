@@ -48,6 +48,7 @@ class CertFinderThread(threading.Thread):
     testing)
     """
     # pylint: disable=too-many-instance-attributes
+
     def __init__(self, *args, **kwargs):
         """
         Initialise the thread with its parent :class:`threading.Thread` and its

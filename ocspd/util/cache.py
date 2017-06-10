@@ -23,6 +23,7 @@ class cache(collections.OrderedDict):
                 else:
             return fib(n-1) + fib(n-2)
     """
+
     def __init__(self, max_size=None):
         if max_size == 0:
             max_size = None

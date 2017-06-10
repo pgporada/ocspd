@@ -172,6 +172,7 @@ class _Colourbox(object):
         asking for the colours.
     """
     # pylint: disable=too-few-public-methods
+
     def __init__(self, **kwargs):
         """
             Initialise the _Colourbox helper class.

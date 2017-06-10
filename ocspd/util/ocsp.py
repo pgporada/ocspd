@@ -11,6 +11,7 @@ class OCSPResponseParser(object):
     """
     Simpler wrapper for OCSP responses, with shortcuts to most used data.
     """
+
     def __init__(self, ocsp_data=None):
         """
         Initialise an `asn1crypto.ocsp.OCSPResponse` object in self._response.

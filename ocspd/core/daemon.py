@@ -211,7 +211,7 @@ class OCSPDaemon(object):
                     self.__spawn_thread(
                         name=thread['name'],
                         thread_object=thread['object'],
-                        restarted=thread['restarted']+1,
+                        restarted=thread['restarted'] + 1,
                         **thread['kwargs']
                     )
                 else:
