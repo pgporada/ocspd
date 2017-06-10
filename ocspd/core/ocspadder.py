@@ -121,7 +121,8 @@ class OCSPAdder(threading.Thread):
                 model = context.model
                 LOG.debug("Sending staple for cert:'%s'", model)
 
-                # Open the exception handler context to run tasks likely to fail
+                # Open the exception handler context to run tasks likely to
+                # fail
                 with ocsp_except_handle(context):
                     self.add_staple(model)
                 self.scheduler.task_done(self.TASK_NAME)
