@@ -52,7 +52,7 @@ Debian package
 
 We package ocspd for Debian, but it will still have dependencies that are not
 available as debian packages. This means you need to either still use ``pip`` to
-install those dependencies, or you will need to package rhe dependencies yourself.
+install those dependencies, or you will need to package the dependencies yourself.
 
 There is a build script in the root of this project: ``build_deb_pkg.sh``. It
 will automatically download the dependencies master branches from Github and
