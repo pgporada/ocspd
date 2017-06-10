@@ -50,14 +50,14 @@ start the daemon by running ``ocspd``
 Debian package
 --------------
 
-We package ocspd for Debian, but it will still have dependencies that are not
-available as debian packages. This means you need to either still use ``pip`` to
-install those dependencies, or you will need to package the dependencies yourself.
+We package ocspd for Debian, but it will still have depenfencies that are not
+available as debian packages. This means you need to either still use PIP to
+install those dependencies, or you need to package them yourself.
 
-There is a build script in the root of this project: ``build_deb_pkg.sh``. It
+There is a build script in the root of this project: `build_deb_pkg.sh`. It
 will automatically download the dependencies master branches from Github and
 package them, the finished packages including a package for ocspd will be in
-the ``build`` directory.
+the `build` directory.
 
 .. Warning:: Do not use this, none of the source code you are about to check
     out will be audited, you will need to vet it yourself. Also it will cause
